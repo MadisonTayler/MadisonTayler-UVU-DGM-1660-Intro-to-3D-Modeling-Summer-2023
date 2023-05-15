@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Chair_001.ma
-//Last modified: Mon, May 15, 2023 11:10:49 AM
+//Last modified: Mon, May 15, 2023 11:20:45 AM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.2";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19044)";
-fileInfo "UUID" "E2321665-4224-31C2-1733-F6B3B919EDF8";
+fileInfo "UUID" "730B7177-4AEE-9365-18EF-36847F89268E";
 createNode transform -s -n "persp";
 	rename -uid "30707F1E-4772-AE66-6870-A1B1C3CDFB29";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -14.229338756638761 8.3223449461710004 10.135286349157139 ;
-	setAttr ".r" -type "double3" -19.538352729852054 -52.600000000006673 -5.2365511985347075e-15 ;
+	setAttr ".t" -type "double3" -10.025373988818197 8.5009606922211951 13.968669265476453 ;
+	setAttr ".r" -type "double3" -20.138352729852294 -33.40000000000709 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "77FDCB42-4B44-F11D-C14A-679C35B31D6E";
 	setAttr -k off ".v" no;
@@ -229,19 +229,19 @@ createNode mesh -n "ChairMeshShape" -p "ChairMesh";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "67245412-466B-35A7-72AF-AB834A4419C1";
+	rename -uid "E0FDF592-411B-E2C2-E040-E1AD8CE26BCF";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D41408AB-44FF-484C-5B72-68982A69D5BB";
+	rename -uid "999B8AF1-457C-6305-64F9-F887C3E1861E";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "2CC3F62A-4CA6-1CE4-33C0-3F8477E21BF3";
+	rename -uid "BAD29EA1-4B5F-A20F-2C3E-2E8CF4A552D8";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "06036988-4B93-02DF-7710-60B874FF47CB";
+	rename -uid "F2CBC702-4BB1-EFEC-761B-1DA84F771588";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "217A0DF5-4E15-EEF0-8997-39820EC5932F";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7F68A244-4D3C-6E1B-6F9F-BCB4F8117E03";
+	rename -uid "777D23CD-4328-E190-BABB-F996E3FFBD5A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "EBD2C007-4A8E-F6F5-4087-A4BDBFF859FE";
 	setAttr ".g" yes;
@@ -334,8 +334,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId1.id" "ChairMeshShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "ChairMeshShape.iog.og[0].gco";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
