@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Couch_001.ma
-//Last modified: Fri, May 19, 2023 12:12:33 PM
+//Last modified: Fri, May 19, 2023 12:19:35 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.2";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19044)";
-fileInfo "UUID" "D4EBF6AF-499D-D272-8DF5-67999F042824";
+fileInfo "UUID" "120AB96F-4849-B2C4-D4BD-819AA6A7C359";
 createNode transform -s -n "persp";
 	rename -uid "76C06263-43CF-0BB3-E5EB-6687400E1735";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.5384796211219731 10.817925611390775 24.441389168140034 ;
-	setAttr ".r" -type "double3" -19.538352729466823 730.99999999985619 0 ;
+	setAttr ".t" -type "double3" 0.73353138918721372 4.633569480271845 -21.974183074055031 ;
+	setAttr ".r" -type "double3" -5.1383527300295437 538.59999999981176 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8B8AF632-4D93-DEA2-23E3-E8A27CCF825A";
 	setAttr -k off ".v" no;
@@ -972,7 +972,7 @@ createNode mesh -n "pCubeShape9" -p "pCube9";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCylinder1";
 	rename -uid "72A6F3D7-4519-89F5-B84A-8EB680971D4E";
-	setAttr ".t" -type "double3" -3.6581816747930316 0.38932577668933754 3.8789038592237528 ;
+	setAttr ".t" -type "double3" -3.6133189050242103 0.38932577668933754 3.8789038592237528 ;
 	setAttr ".r" -type "double3" -34.252391824992806 -46.553356041588401 11.473798893579588 ;
 	setAttr ".s" -type "double3" 0.10772957064094478 0.35743211418664284 0.10772957064094478 ;
 	setAttr ".rp" -type "double3" 0 -0.35743215456710536 0 ;
