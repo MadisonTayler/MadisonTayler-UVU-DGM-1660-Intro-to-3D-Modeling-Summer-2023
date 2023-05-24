@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: CouchRemodel_001.ma
-//Last modified: Wed, May 24, 2023 05:06:18 PM
+//Last modified: Wed, May 24, 2023 05:17:49 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.2";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "35D05247-42C4-0999-B032-E9A2D9F87C1D";
+fileInfo "UUID" "E3976AF9-46D9-B31D-B2B9-3AB0677428A2";
 createNode transform -s -n "persp";
 	rename -uid "15BBF43E-47DA-4DD4-7BDD-5B9627DD0302";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.03569182305437657 2.1580202004977771 -22.031946461452534 ;
-	setAttr ".r" -type "double3" -1.5383527321505619 899.39999999997087 0 ;
+	setAttr ".t" -type "double3" 0.62673351238193431 14.33714107932339 18.287346139485624 ;
+	setAttr ".r" -type "double3" -35.138352732147773 1082.5999999999531 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "546944F6-4937-E75C-7F8D-8E8AC4B4CEA1";
 	setAttr -k off ".v" no;
